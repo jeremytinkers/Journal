@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%-include("partials/header");-%>
+
+
+<%for(var i=0;i<post_list_markup.length;i++){%>
+    <a href="/posts/<%=post_list_markup[i].new_title%>">  <h1 ><%=post_list_markup[i].new_title%></h1></a>
+  <p><%=post_list_markup[i].new_content.substring(0,100)+"...."%>
+  </p>
+
+    <%}%>
+
+    <%-include("partials/footer");-%>
+  </body>
+</html>
